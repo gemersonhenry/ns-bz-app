@@ -1,3 +1,17 @@
-<GridLayout>
+<RootLayout>
   <page-router-outlet></page-router-outlet>
-</GridLayout>
+
+  <GridLayout
+    *ngIf="!(isAppReady$ | async)"
+    rows="*,auto,*"
+    columns="*,auto,*"
+    class="bg-black--dark"
+    (loaded)="loadedIntro($event)">
+    <Label row="1" colSpan="3" 
+      horizontalAlignment="center" 
+      class="loading-text" 
+      text="Loading Book Store App...">
+    </Label>
+  </GridLayout>
+
+</RootLayout>

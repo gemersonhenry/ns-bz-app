@@ -29,6 +29,11 @@
   "bugs": {
     "url": "https://github.com/NativeScript/NativeScript/issues"
   },
+  "scripts": {
+    "clean:custom": "rm -rf node_modules platforms && npm i",
+    "clean": "ns clean",
+    "start": "ns run android --no-hmr"
+  },
   "dependencies": {
     "@angular/animations": "~12.0.0",
     "@angular/common": "~12.0.0",
@@ -46,6 +51,7 @@
   },
   "devDependencies": {
     "@angular/compiler-cli": "~12.0.0",
+    "@nativescript/android": "8.0.0",
     "@nativescript/types": "~8.0.0",
     "@nativescript/webpack": "beta",
     "@ngtools/webpack": "~12.0.0",

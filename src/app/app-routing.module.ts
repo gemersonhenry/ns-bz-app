@@ -2,17 +2,24 @@ import { NgModule } from '@angular/core'
 import { Routes } from '@angular/router'
 import { NativeScriptRouterModule } from '@nativescript/angular'
 
-import { ItemsComponent } from './item/items.component'
-import { ItemDetailComponent } from './item/item-detail.component'
-
 const routes: Routes = [
-  { path: '', redirectTo: '/items', pathMatch: 'full' },
-  { path: 'items', component: ItemsComponent },
-  { path: 'item/:id', component: ItemDetailComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  {
+    path: 'home',
+    loadChildren: () => import('./business/home/home.module').then(m => m.HomeModule),
+  },
+  {
+    path: '**',
+    redirectTo: '/home',
+  }
 ]
 
 @NgModule({
-  imports: [NativeScriptRouterModule.forRoot(routes)],
+  imports: [NativeScriptRouterModule.forRoot(routes, {
+    useHash: true,
+    enableTracing: false,
+    initialNavigation: 'disabled'
+  })],
   exports: [NativeScriptRouterModule],
 })
 export class AppRoutingModule {}

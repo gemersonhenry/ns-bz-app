@@ -1,0 +1,38 @@
+<ActionBar title="HOME"> </ActionBar>
+
+<GridLayout padding="0">
+  <ListView [items]="pokemons">
+    <ng-template let-pokemon="item" let-i="index"
+      let-odd="odd" let-even="even">
+      <!-- <StackLayout [nsRouterLink]="['/item', item.id]">
+        <Label [text]="item.name"></Label>
+      </StackLayout> -->
+      <StackLayout height="90" padding="10 10 0 10">
+        <GridLayout rows="30,50" columns="80,*"
+          borderColor="green"
+          borderWidth="1"
+          borderRadius="10"
+          backgroundColor="lightgreen"
+          (tap)="selectPokemon(pokemon.entry_number)">
+          <Image col="0" row="0" rowSpan="2"
+            src="{{ pokemon.imgSrc }}"
+            width="80"
+            height="80"
+            stretch="aspectFill"
+            loadMode="async">
+          </Image>
+          <Label row="0" col="1"
+            [text]="pokemon.pokemon_species.name"
+            class="label-1">
+          </Label>
+          <Label row="1" col="1"
+            height="44"
+            [text]="description"
+            class="label--1"
+            textWrap="true">
+          </Label>
+        </GridLayout>
+      </StackLayout>
+    </ng-template>
+  </ListView>
+</GridLayout>
