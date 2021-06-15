@@ -27,7 +27,6 @@ export class HomeComponent implements OnInit {
     this.pokemosData.getPokemons$()
       .pipe(take(1))
       .subscribe(pokemons => {
-        console.log(pokemons);
         this.pokemons = pokemons;
       });
   }

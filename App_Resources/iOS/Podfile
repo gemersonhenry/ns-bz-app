@@ -1,0 +1,2 @@
+pod 'SDWebImage', '~> 5.11'
+pod 'Alamofire', '~> 4.9.1'

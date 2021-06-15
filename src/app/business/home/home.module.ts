@@ -10,7 +10,6 @@ import { HomeComponent } from './view/home.view';
     HomeRoutingModule, NativeScriptCommonModule
   ],
   declarations: [HomeComponent],
-  providers: [],
   schemas: [NO_ERRORS_SCHEMA],
 })
 export class HomeModule {}

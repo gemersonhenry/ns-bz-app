@@ -12,7 +12,11 @@
     "baseUrl": ".",
     "paths": {
       "~/*": ["src/*"],
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "@utils/*": ["src/app/shared/utils/*"],
+      "@models/*": ["src/app/shared/models/*"],
+      "@data/*": ["src/app/shared/data/*"],
+      "@services/*": ["src/app/shared/services/*"],
     }
   },
   "include": ["src/tests/**/*.ts", "src/**/*.ios.ts", "src/**/*.android.ts"],

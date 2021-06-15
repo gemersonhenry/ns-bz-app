@@ -28,7 +28,7 @@ export class AppModule {
       .subscribe({
         next: (config) => {
           console.log('SUCCESS: AppModule => getAppConfig');
-          this.router.navigate(['home']);
+          this.router.navigate(['ios-input-mask-demo']);
           this.configService.setIfAppIsReady(true);
           this.loggerService.setIfLoggerIsEnabled(config.isLoggerEnable);
         },

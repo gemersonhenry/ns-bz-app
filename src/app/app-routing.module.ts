@@ -9,6 +9,10 @@ const routes: Routes = [
     loadChildren: () => import('./business/home/home.module').then(m => m.HomeModule),
   },
   {
+    path: 'ios-input-mask-demo',
+    loadChildren: () => import('./business/ios-input-mask/ios-input-mask.module').then(m => m.IosInputMaskModule),
+  },
+  {
     path: '**',
     redirectTo: '/home',
   }

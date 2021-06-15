@@ -32,7 +32,9 @@
   "scripts": {
     "clean:custom": "rm -rf node_modules platforms && npm i",
     "clean": "ns clean",
-    "start": "ns run android --no-hmr"
+    "start:android": "ns run android --no-hmr",
+    "start:ios:13": "ns run ios --provision 440ed374-5e20-4b6e-b223-3094282fa2a6 --no-hmr --device 4DDD3F88-D39D-4C41-B3E6-E915A2F85778",
+    "start:ios:14": "ns run ios --provision 440ed374-5e20-4b6e-b223-3094282fa2a6 --no-hmr --device F7249F72-C93E-4A0B-BCE7-83BDC556F72D"
   },
   "dependencies": {
     "@angular/animations": "~12.0.0",
@@ -52,6 +54,7 @@
   "devDependencies": {
     "@angular/compiler-cli": "~12.0.0",
     "@nativescript/android": "8.0.0",
+    "@nativescript/ios": "8.0.0",
     "@nativescript/types": "~8.0.0",
     "@nativescript/webpack": "beta",
     "@ngtools/webpack": "~12.0.0",
