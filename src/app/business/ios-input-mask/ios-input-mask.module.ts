@@ -3,6 +3,7 @@ import { NativeScriptCommonModule } from '@nativescript/angular';
 
 import { DemoInputMaskRoutingModule } from './ios-input-mask-routing.module';
 import { DemoInputMaskComponent } from './view/demo-input-mask.view';
+import { GifDemoComponent } from './view/gif-demo/gif-demo.view';
 
 @NgModule({
   imports: [
@@ -11,6 +12,7 @@ import { DemoInputMaskComponent } from './view/demo-input-mask.view';
   ],
   declarations: [
     DemoInputMaskComponent,
+    GifDemoComponent,
   ],
   schemas: [NO_ERRORS_SCHEMA],
 })
