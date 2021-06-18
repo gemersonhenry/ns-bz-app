@@ -3,6 +3,9 @@ hooks/
 node_modules/
 platforms/
 
+# Config
+package-lock.json
+
 # Logs
 logs
 *.log
