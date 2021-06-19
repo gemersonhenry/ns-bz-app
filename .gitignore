@@ -6,6 +6,9 @@ platforms/
 # Config
 package-lock.json
 
+# Types
+typingz/
+
 # Logs
 logs
 *.log
