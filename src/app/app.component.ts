@@ -3,6 +3,7 @@ import { View } from '@nativescript/core';
 
 import { ConfigService } from './shared/services/config.service';
 import { LoggerService } from './shared/services/logger.service';
+import { APP_TITLE } from './shared/constant';
 
 @Component({
   selector: 'ns-app',
@@ -12,6 +13,7 @@ export class AppComponent {
 
   public isAppReady$ = this.configService.isAppReady$;
   intro: View;
+  public appTitle = APP_TITLE;
 
   constructor(
     private configService: ConfigService,

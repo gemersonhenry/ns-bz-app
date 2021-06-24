@@ -4,6 +4,7 @@ import { take } from 'rxjs/operators';
 
 import { LoggerService } from './../../../shared/services/logger.service';
 import { FormattedPokemon, PokemosDataService } from './../../../shared/data/pokePokemons/pokemons.data';
+import { HOME_TITLE } from '../shared/constant';
 
 @Component({
   selector: 'ns-home',
@@ -15,7 +16,7 @@ export class HomeComponent implements OnInit {
   private loggingKey = 'HomeComponent';
   public pokemons: FormattedPokemon[] = [];
   public description = 'Minus explicabo magni earum doloremque amet, ipsum dolorem incidunt laborum hic totam, cum qui odio maxime.';
-
+  public homeTitle = HOME_TITLE;
 
   constructor(
     private logger: LoggerService,
